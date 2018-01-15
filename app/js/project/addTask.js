@@ -9,8 +9,8 @@ var addButton = document.getElementById('add_task'),
 
 
 addButton.onclick = function() {
+	task_id++;
 	var newTask = new Task(task_id, taskName.value, taskDate.value, taskDescription.value);
-	newTask.increaseId();
 	console.log(newTask);
 	TaskHandler.add(newTask);
 	console.log(TaskHandler.array);
