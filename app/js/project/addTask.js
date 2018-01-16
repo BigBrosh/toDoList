@@ -5,13 +5,23 @@ import {TaskCounter} from './taskCounter';
 var addButton = document.getElementById('add_task'),
 	taskName = document.getElementById('task_name'),
 	taskDate = document.getElementById('task_date'),
-	taskDescription = document.getElementById('task_description');
+	taskDescription = document.getElementById('task_description'),
+	output = document.getElementById('output');
 
 
 addButton.onclick = function() {
 	TaskCounter.increase();
 	var newTask = new Task(TaskCounter.number, taskName.value, taskDate.value, taskDescription.value);
-	console.log(newTask);
 	TaskHandler.add(newTask);
-	console.log(TaskHandler.array[0].name);
-};
+	// console.log(TaskHandler.array[0].name);
+	
+
+	var newRow = document.createElement('tr');
+	newRow.innerHTML = '<td>' + newTask.name + '</td>';
+	newRow.innerHTML += '<td>' + newTask.date + '</td>';
+	newRow.innerHTML += '<td>' + newTask.description + '</td>';
+	
+	output.appendChild(newRow);
+	console.log('mas ' + TaskHandler.array[TaskHandler.array.length - 1].id);
+	console.log('newTask ' + newTask.id);
+}
