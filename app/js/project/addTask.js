@@ -20,7 +20,8 @@ addButton.onclick = function() {
 	newRow.innerHTML = '<td>' + newTask.name + '</td>';
 	newRow.innerHTML += '<td>' + newTask.date + '</td>';
 	newRow.innerHTML += '<td>' + newTask.description + '</td>';
-	
+	newRow.innerHTML += '<td> <input type="checkbox"> </td>';
+
 	output.appendChild(newRow);
 	console.log('mas ' + TaskHandler.array[TaskHandler.array.length - 1].id);
 	console.log('newTask ' + newTask.id);
