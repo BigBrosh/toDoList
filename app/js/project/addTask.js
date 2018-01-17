@@ -12,18 +12,14 @@ var addButton = document.getElementById('add_task'),
 addButton.onclick = function() {
 	TaskCounter.increase();
 	var newTask = new Task(TaskCounter.number, taskName.value, taskDate.value, taskDescription.value);
-	TaskHandler.add(newTask);
-	// console.log(TaskHandler.array[0].name);
-	
+	TaskHandler.add(newTask);	
 
 	var newRow = document.createElement('tr');
 	newRow.id = TaskCounter.number;
-	newRow.innerHTML = '<td>' + newTask.name + '</td>';
-	newRow.innerHTML += '<td>' + newTask.date + '</td>';
-	newRow.innerHTML += '<td>' + newTask.description + '</td>';
-	newRow.innerHTML += '<td> <input type="checkbox"> </td>';
+	newRow.innerHTML = '<td>' + newTask.name + '</td>'
+					 + '<td>' + newTask.date + '</td>'
+					 + '<td>' + newTask.description + '</td>'
+					 + '<td> <input type="checkbox"> </td>';
 
 	output.appendChild(newRow);
-	console.log('mas ' + TaskHandler.array[TaskHandler.array.length - 1].id);
-	console.log('newTask ' + newTask.id);
 }
