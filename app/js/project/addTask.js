@@ -10,6 +10,11 @@ var addButton = document.getElementById('add_task'),
 
 
 addButton.onclick = function() {
+	if (taskName.value == '' || taskDate.value == '' || taskDescription.value == ''){
+		alert('input can\'t be empty');
+		return false;
+	}
+
 	TaskCounter.increase();
 	var newTask = new Task(TaskCounter.number, taskName.value, taskDate.value, taskDescription.value);
 	TaskHandler.add(newTask);	

@@ -7,36 +7,38 @@
 </head>
 <body>
 	<div class="main_wrapp">
-		<table class="create_task">
-			<tr class="input_task_name">
-				<td>
-					<label for="task_name">Задание: </label>
-				</td>
-				<td>
-					<input type="text" name="task_name" id="task_name">
-				</td>
-			</tr>
+		<div class="create_wrapp">
+			<table class="create_task">
+				<tr class="input_task_name">
+					<td>
+						<label for="task_name">Задание: </label>
+					</td>
+					<td>
+						<input type="text" name="task_name" id="task_name">
+					</td>
+				</tr>
 
-			<tr class="input_task_date">
-				<td>
-					<label for="task_date">Сроки: </label>
-				</td>
-				<td>
-					<input type="text" name="task_date" id="task_date">
-				</td>
-			</tr>
+				<tr class="input_task_date">
+					<td>
+						<label for="task_date">Сроки: </label>
+					</td>
+					<td>
+						<input type="text" name="task_date" id="task_date">
+					</td>
+				</tr>
 
-			<tr class="input_task_description">
-				<td>
-					<label for="task_description">Описание: </label>
-				</td>
-				<td>
-					<input type="text" name="task_description" id="task_description">
-				</td>
-			</tr>
-		</table>
+				<tr class="input_task_description">
+					<td>
+						<label for="task_description">Описание: </label>
+					</td>
+					<td>
+						<textarea name="task_description" id="task_description" cols="26" rows="2"></textarea>
+					</td>
+				</tr>
+			</table>
 
-		<button id="add_task">Добавить задание</button>
+			<button id="add_task">Добавить задание</button>
+		</div>
 
 		<table id="output">
 			<tr>

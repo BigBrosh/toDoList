@@ -13,10 +13,40 @@
   clear: both; }
 
 body {
-  padding: 10px; }
+  padding: 10px;
+  font-family: Geneva, Arial, Helvetica, sans-serif; }
+
+.create_wrapp {
+  display: inline-block;
+  margin-bottom: 60px; }
+
+.create_task td {
+  padding-bottom: 10px;
+  vertical-align: top; }
+
+.create_task input, .create_task textarea {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 4px 6px;
+  min-width: 180px; }
+
+.create_task textarea {
+  resize: none; }
+
+.create_task label {
+  margin-right: 10px; }
+
+#add_task {
+  background: none;
+  outline: none;
+  padding: 5px 8px;
+  border: 1px solid #303030;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  display: block;
+  margin-left: auto;
+  cursor: pointer; }
 
 #output {
-  margin-top: 20px;
   border-collapse: collapse;
   position: relative; }
   #output tr p {
@@ -58,7 +88,9 @@ body {
               animation: task_done 2s; }
   #output td {
     padding: 5px 10px;
-    border: 1px solid #303030; }
+    border: 1px solid #303030;
+    max-width: 150px;
+    word-break: break-word; }
     #output td:last-child {
       text-align: center; }
 
