@@ -19,14 +19,30 @@ body {
   margin-top: 20px;
   border-collapse: collapse;
   position: relative; }
+  #output tr p {
+    position: absolute;
+    right: -75px;
+    margin-top: -25px;
+    cursor: pointer;
+    display: none; }
   #output tr input[type=checkbox] {
     outline-color: red;
     -webkit-transition: .7s;
     transition: .7s; }
     #output tr input[type=checkbox]:checked {
-      outline-color: green;
-      -webkit-transition: .7s;
-      transition: .7s; }
+      outline-color: green; }
+    #output tr input[type=checkbox]:checked + p {
+      display: block;
+      border: 2px solid rgba(0, 255, 0, 0.6);
+      color: rgba(0, 255, 0, 0.6);
+      padding: 1px 4px;
+      -webkit-transition: .3s;
+      transition: .3s;
+      -webkit-border-radius: 3px;
+              border-radius: 3px; }
+      #output tr input[type=checkbox]:checked + p:hover {
+        background: rgba(0, 255, 0, 0.6);
+        color: #fff; }
     #output tr input[type=checkbox]:checked::before {
       position: absolute;
       content: '';

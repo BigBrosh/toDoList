@@ -19,7 +19,7 @@ addButton.onclick = function() {
 	newRow.innerHTML = '<td>' + newTask.name + '</td>'
 					 + '<td>' + newTask.date + '</td>'
 					 + '<td>' + newTask.description + '</td>'
-					 + '<td> <input type="checkbox"> </td>';
+					 + '<td> <input type="checkbox">' + '<p>remove</p>' + '</td>';
 
 	output.appendChild(newRow);
 }
