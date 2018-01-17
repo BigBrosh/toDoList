@@ -10,6 +10,6 @@ var counter = class {
 	decrease(){
 		this.number--;
 	}
-}
+};
 
 export var TaskCounter = new counter(0);

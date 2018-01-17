@@ -8,7 +8,6 @@ var addButton = document.getElementById('add_task'),
 	taskDescription = document.getElementById('task_description'),
 	output = document.getElementById('output');
 
-
 addButton.onclick = function() {
 	if (taskName.value == '' || taskDate.value == '' || taskDescription.value == ''){
 		alert('input can\'t be empty');
@@ -20,11 +19,12 @@ addButton.onclick = function() {
 	TaskHandler.add(newTask);	
 
 	var newRow = document.createElement('tr');
+
 	newRow.id = TaskCounter.number;
 	newRow.innerHTML = '<td>' + newTask.name + '</td>'
 					 + '<td>' + newTask.date + '</td>'
 					 + '<td>' + newTask.description + '</td>'
-					 + '<td> <input type="checkbox">' + '<p>remove</p>' + '</td>';
+					 + '<td>' + '<input type="checkbox">' + '<p>remove</p>' + '</td>';
 
 	output.appendChild(newRow);
 }

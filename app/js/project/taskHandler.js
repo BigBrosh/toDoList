@@ -8,6 +8,6 @@ var handler = class {
 	add(task) {
 		this.array.push(task);
 	}
-}
+};
 
 export var TaskHandler = new handler(taskArray);
