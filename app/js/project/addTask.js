@@ -17,6 +17,7 @@ addButton.onclick = function() {
 	
 
 	var newRow = document.createElement('tr');
+	newRow.id = TaskCounter.number;
 	newRow.innerHTML = '<td>' + newTask.name + '</td>';
 	newRow.innerHTML += '<td>' + newTask.date + '</td>';
 	newRow.innerHTML += '<td>' + newTask.description + '</td>';
